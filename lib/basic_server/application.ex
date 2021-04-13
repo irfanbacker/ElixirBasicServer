@@ -13,7 +13,7 @@ defmodule BasicServer.Application do
       # {BasicServer.Worker, arg}
       {Plug.Cowboy,
        scheme: :http,
-       plug: Endpoints,
+       plug: BasicServer.Endpoints,
        options: [port: Application.get_env(:basic_server, :port, 4000)]}
     ]
 
